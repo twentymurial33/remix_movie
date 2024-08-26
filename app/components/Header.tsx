@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Group, Burger } from '@mantine/core';
+import { Container, Burger,Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 //import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './Header.module.css';
@@ -33,11 +33,12 @@ function Header() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
+        <h1>Remix Movie Marketplace</h1>
         {/* <MantineLogo size={28} /> */}
-        <Group gap={5} visibleFrom="xs">
+        <Button variant="filled" color="blue" style={{marginLeft:'40px'}}>
           {items}
-        </Group>
-
+        </Button>
+       
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>
